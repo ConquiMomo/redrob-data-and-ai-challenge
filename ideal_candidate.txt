@@ -1,0 +1,11 @@
+Six to eight years total experience of which four to five years are in applied ML and AI roles at product companies that shipped to paying customers or real users, not at companies whose product is engineering capacity rented to other companies.
+
+Has shipped at least one end-to-end ranking, search, or recommendation system to real users at meaningful scale. Not a prototype. Not an internal demo. A system where retrieval quality degrading on a Tuesday morning meant someone had to fix it before noon.
+
+Has strong opinions about retrieval — hybrid versus dense, when BM25 still wins, when embedding drift happens silently — and can defend those opinions with reference to specific systems they actually built and specific failures they actually diagnosed.
+
+Has designed and owned evaluation infrastructure for ranking systems. Understands rank-aware evaluation metrics as practical tools, not just theoretical concepts. Has connected offline evaluation to online A/B test results and knows the specific ways they diverge.
+
+Operated embedding pipelines in production long enough to watch them fail in ways not covered by tutorials. Index drift between training and serving, recall dropping silently because document distribution shifted.
+
+Deeply understands vector databases and hybrid search infrastructure. Has deployed and maintained approximate nearest neighbor indexes in production at scale, handling the operational tradeoffs of distributed vector storage rather than just calling a hosted API.

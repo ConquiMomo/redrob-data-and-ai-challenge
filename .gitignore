@@ -1,0 +1,21 @@
+# Large dataset file — provided by organizers, not redistributed in this repo.
+# Place it in the repo root before running precompute.py.
+candidates.jsonl
+
+# Generated artifacts — reproducible by running precompute.py / rank.py.
+precomputed.json
+submission.csv
+*.csv
+!sample_submission.csv
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# OS / editor noise
+.DS_Store
+.idea/
+*.swp

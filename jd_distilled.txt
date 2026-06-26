@@ -1,0 +1,11 @@
+Spent years building search, ranking, and retrieval systems that real users depended on daily. Not prototypes. Not internal demos.
+
+Operated embedding pipelines in production long enough to watch them go wrong in ways that were not in any tutorial. Index drift between training and serving, embedding model updates breaking downstream ranking without warning, recall dropping silently because document distribution shifted. Diagnosed these problems from metrics and logs, not from being told what was wrong.
+
+Has a working definition of retrieval quality that is not just a static benchmark. Has connected offline evaluation to online behavior and knows the specific ways they diverge and has opinions about why. Has run A/B tests on ranking changes and been surprised by the results.
+
+Spent the majority of their career at companies that shipped products to paying customers or real users, not at companies whose product is engineering capacity rented to other companies.
+
+Can reason about candidate-job matching as a precision-recall tradeoff not just as a similarity problem. Understands that a ranking system that returns the ten most similar candidates is not the same as a ranking system that returns the ten best candidates for the role.
+
+Finds purely framework-based thinking frustrating because frameworks hide the decisions that matter. Describes work in terms of what the system did, what broke, what they changed, and what improved.

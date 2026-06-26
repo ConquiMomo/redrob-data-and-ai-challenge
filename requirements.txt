@@ -1,0 +1,6 @@
+# Pinned for reproducibility. If unsure of your exact installed versions,
+# run `pip freeze | grep -iE "sentence-transformers|numpy|torch"` in your
+# working environment and replace the versions below with those.
+sentence-transformers==3.0.1
+numpy==1.26.4
+torch==2.3.1

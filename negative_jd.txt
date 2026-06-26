@@ -1,0 +1,13 @@
+Profile reads like a keyword-stuffed list of every modern AI framework and database, but lacks a coherent narrative of long-term project ownership. Claims expert-level proficiency across disparate subfields simultaneously without corresponding realistic tenure.
+
+Spent the majority of their career at IT services and consulting firms billing engineering capacity to clients — TCS, Infosys, Wipro, Accenture, Cognizant, Capgemini — without ever owning a product used by real users. Describes all work in terms of client deliverables and project timelines.
+
+Has optimized primarily for title progression — Senior to Staff to Principal to Architect — switching companies every twelve to eighteen months to climb the ladder rather than staying long enough to see systems break and fix them.
+
+Primary technical identity is framework-based. GitHub history is tutorials, walkthroughs, and demos built on LangChain, LlamaIndex, AutoGPT, and other wrappers. Has not written the underlying retrieval or ranking logic that these frameworks abstract away.
+
+Spent the last several years in architecture, tech lead, or engineering management roles without writing production code.
+
+Primary expertise is strictly in computer vision, image classification, object detection, speech recognition, robotics, or video understanding. Has no meaningful experience with information retrieval, search relevance, or candidate ranking.
+
+Has never designed an evaluation framework for a ranking system. Cannot explain the relationship between offline metrics on a static benchmark and online user engagement.
