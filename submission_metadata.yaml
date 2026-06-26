@@ -4,51 +4,40 @@
 # ============================================================================
 # Team identity
 # ============================================================================
-team_name: "FILL_IN_YOUR_TEAM_NAME"
+team_name: "Mohit Mehra"
 
 primary_contact:
   name: "Mohit Mehra"
-  email: "FILL_IN_YOUR_EMAIL"
-  phone: "FILL_IN_YOUR_PHONE"
+  email: "mohitmehra654321@gmail.com"
+  phone: "7906732142"
 
-team_members:
-  - name: "Mohit Mehra"
-    email: "FILL_IN_YOUR_EMAIL"
-    role: "ML Engineer"
-  # Add more members here if this is a team submission, else leave as solo
 
 # ============================================================================
 # Code and reproducibility
 # ============================================================================
-github_repo: "https://github.com/FILL_IN_YOUR_USERNAME/FILL_IN_YOUR_REPO"
-# Must be reachable. Private repos OK if you can grant organizer access at
-# Stage 3 (the email to add will be communicated then).
+github_repo: "https://github.com/ConquiMomo/redrob-data-and-ai-challenge"
+
 
 sandbox_link: "FILL_IN_YOUR_COLAB_OR_HF_SPACES_LINK"
 # Required. See README.md "Sandbox" section for what this needs to do
 # (run end-to-end on a small sample, ≤100 candidates, ≤5 min on CPU).
 
 reproduce_command: "python precompute.py && python rank.py"
-# Two-stage pipeline: precompute.py builds precomputed.json (slow, allowed
-# to exceed 5 min per spec Section 10.3 — it does bi-encoder embedding over
-# all survivors). rank.py reads precomputed.json and produces submission.csv
-# (fast — this is the step timed against the 5-minute / 16GB / no-GPU /
-# no-network budget). Both assume candidates.jsonl is present in the
-# repo root (or wherever CANDIDATES_FILE in precompute.py points).
+
 
 # ============================================================================
 # Compute environment
 # ============================================================================
 compute:
-  platform: "FILL_IN — e.g. 'Windows PC, Intel i7' or similar"
-  cpu_cores: 0  # FILL IN — number of CPU cores on the machine you tested on
-  ram_gb: 16    # FILL IN if different
-  python_version: "3.11"  # FILL IN exact version, e.g. from `python --version`
-  os: "Windows"  # FILL IN exact OS/version
+  platform: "Windows 10 PC, Intel Core i7-12th Gen (Family 6 Model 154), 12 logical cores"
+  cpu_cores: 12  
+  ram_gb: 16    
+  python_version: "3.11.0"  # FILL IN exact version, e.g. from `python --version`
+  os: "Windows 10 (Build 26200)"  # FILL IN exact OS/version
   uses_gpu_for_inference: false
   has_network_during_ranking: false
   pre_computation_required: true
-  pre_computation_time_minutes: 17  # ~1000s observed; update with your actual latest measured time
+  pre_computation_time_minutes: 21  # ~1000s observed; update with your actual latest measured time
 
 # ============================================================================
 # AI tools declaration
@@ -78,7 +67,7 @@ ai_usage_summary: |
 methodology_summary: |
   Two-stage pipeline (precompute.py / rank.py) over the 100K-candidate pool.
   Stage 1 hard-filters on availability, experience floor, product-company
-  tenure, and ML/AI skill presence (6,735 survivors). Stage 2 computes a
+  tenure, and ML/AI skill presence (11,534 survivors). Stage 2 computes a
   consistency multiplier combining proficiency/duration mismatches,
   endorsement-uniformity (honeypot) detection, duplicate-description
   detection, explicit date-logic impossibility checks (skill duration
@@ -95,7 +84,7 @@ methodology_summary: |
   framework-only ("calls APIs, no systems depth") profiles, unsupported
   AI/ML skill claims (category-level corroboration against career-history
   text), and long notice periods. The top ~500 candidates by base score are
-  reranked by a cross-encoder against three JD-derived signal prompts
+  reranked by a cross-encoder against two JD-derived signal prompts
   (production ownership, evaluation rigor, product-vs-services mentality)
   before final top-100 selection. Reasoning text is generated per candidate
   from the same signals used for scoring, with deterministic phrasing
