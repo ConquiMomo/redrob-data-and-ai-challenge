@@ -4,7 +4,7 @@ candidates.jsonl
 
 # Generated artifacts — reproducible by running precompute.py / rank.py.
 precomputed.json
-submission.csv
+team_datavores.csv
 *.csv
 !sample_submission.csv
 

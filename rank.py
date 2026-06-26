@@ -27,7 +27,7 @@ os.environ["HF_DATASETS_OFFLINE"]  = "1"
 
 # ── CONFIGURATION ──────────────────────────────────────────────────────────────
 PRECOMPUTED_FILE = "precomputed.json"
-OUTPUT_FILE      = "submission.csv"
+OUTPUT_FILE      = "team_datavores.csv"
 TOP_N            = 100
 RERANK_POOL      = 500
 

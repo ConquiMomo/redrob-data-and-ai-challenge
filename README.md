@@ -2,19 +2,19 @@
 
 A two-stage candidate ranking system for the Redrob India "Runs Data \& AI"
 hackathon. Ranks \~100,000 candidates against a Search/Ranking/Retrieval ML
-Engineer job description and produces a top-100 ranked `submission.csv`.
+Engineer job description and produces a top-100 ranked `team_datavores.csv`.
 
 ## Quick start (reproduce the submission)
 
 ```bash
 pip install -r requirements.txt
 python precompute.py    # slow stage — see "Two-stage design" below
-python rank.py           # fast stage — produces submission.csv, timed against the 5-min budget
+python rank.py           # fast stage — produces team_datavores.csv, timed against the 5-min budget
 ```
 
 Both commands assume `candidates.jsonl` is present in the repository root
 (or wherever `CANDIDATES\_FILE` in `precompute.py` is pointed). The output is
-written to `submission.csv` in the repository root.
+written to `team_datavores.csv` in the repository root.
 
 **Single command** (per spec Section 10.3):
 
@@ -31,7 +31,7 @@ separately from the timed ranking step. We split accordingly:
 |Stage|File|What it does|Time budget|
 |-|-|-|-|
 |**Precompute**|`precompute.py`|Loads all 100K candidates, applies hard filters, builds per-candidate text, computes bi-encoder embeddings, structured/behavioral/consistency scores. Writes `precomputed.json`.|No hard limit (observed: \~15-25 min on a 16GB CPU machine)|
-|**Rank**|`rank.py`|Reads `precomputed.json`, combines signals with current weights, reranks the top \~500 with a cross-encoder (2 weighted passes — see below), writes `submission.csv`.|**Must be ≤5 min.** Observed: \~150-200s on the same machine.|
+|**Rank**|`rank.py`|Reads `precomputed.json`, combines signals with current weights, reranks the top \~500 with a cross-encoder (2 weighted passes — see below), writes `team_datavores.csv`.|**Must be ≤5 min.** Observed: \~150-200s on the same machine.|
 
 This split means weight/scoring tuning during development only requires
 re-running the fast `rank.py` stage, not the slow embedding stage.
@@ -50,7 +50,7 @@ local HuggingFace cache (they are downloaded automatically by
 
 ```
 precompute.py                 # Stage 1: slow, produces precomputed.json
-rank.py                        # Stage 2: fast, produces submission.csv
+rank.py                        # Stage 2: fast, produces team_datavores.csv
 validate\_submission.py         # Organizer-provided validator, included for self-check
 jd\_distilled.txt               # Distilled JD text used for the primary semantic-similarity reference
 ideal\_candidate.txt            # "Ideal candidate" reference text (secondary semantic signal)
@@ -127,7 +127,7 @@ this schema.
 ## Validating your own output
 
 ```bash
-python validate\_submission.py submission.csv
+python validate\_submission.py team_datavores.csv
 ```
 
 This is the organizers' own validator script (included here for
