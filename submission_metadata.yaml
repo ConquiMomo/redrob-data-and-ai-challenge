@@ -18,8 +18,8 @@ primary_contact:
 github_repo: "https://github.com/ConquiMomo/redrob-data-and-ai-challenge"
 
 
-sandbox_link: "FILL_IN_YOUR_COLAB_OR_HF_SPACES_LINK"
-# Required. See README.md "Sandbox" section for what this needs to do
+sandbox_link: "https://colab.research.google.com/drive/1aPeg8w6gFHNvtZTdu_tk6cr-n0s2JYI6?usp=sharing"
+
 # (run end-to-end on a small sample, ≤100 candidates, ≤5 min on CPU).
 
 reproduce_command: "python precompute.py && python rank.py"
